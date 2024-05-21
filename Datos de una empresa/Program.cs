@@ -118,9 +118,9 @@ namespace Datos_de_una_empresa
                                     else
                                     {
                                         Console.Clear();
-                                        OpcionVolver = true;
                                         Console.WriteLine("Opcion invalida");
                                         Console.ReadKey();
+                                        OpcionVolver = true;
                                     }
                                 }
                             } while (!OpcionVolver);
@@ -193,7 +193,12 @@ namespace Datos_de_una_empresa
                 Console.WriteLine("Error! Opcion invalida");
 
             }
-           
+            catch (OverflowException)
+            {
+                Console.Clear();
+                Console.WriteLine("Error! Opcion invalida");
+            }
+
         }
         //Metodos sobrecargados
         //Metodo de busqueda lineal
